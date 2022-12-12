@@ -30,7 +30,7 @@ Username  : MolyXx
 Name      : Muhammad Ardhan Aulia Rahman  
 NIM       : L200220096  
   
-Username  : Yuxinens  
+Username  : yuxinens  
 Name      : Zendho Dwi Putra  
 NIM       : L200220134  
   
