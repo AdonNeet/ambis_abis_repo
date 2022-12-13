@@ -2,7 +2,7 @@
 Berikut adalah beberapa sumber untuk belajar tentang beberapa materi python yang berkaitan dengan project  
 Note : tidak harus belajar dari link yang telah dicantumkan, bisa mencari sendiri selain dibawah ini  
 
-# Python
+### Python
 >> Semua tentang python
     [w3schools.com/python](https://www.w3schools.com/python/default.asp)
 
