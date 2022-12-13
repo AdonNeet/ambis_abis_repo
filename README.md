@@ -1,5 +1,10 @@
 # ambis_abis_repo
-Repository kelompok Ambis Abis
+Repository kelompok Ambis Abis  
+
+# Note  
+Untuk mengecek waktu commit dapat dicek di bagian history pada file (bukan di bagian folder),  
+karena yang di branch main adalah hasil merge dengan waktu tidak menentu  
+
 
 # Anggota kelompok  
 Username  : AdonNeet  
