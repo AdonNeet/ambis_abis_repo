@@ -4,20 +4,20 @@ Note : tidak harus belajar dari link yang telah dicantumkan, bisa mencari sendir
   
 ## Python
 ### Semua tentang python
-: - [w3schools.com/python](https://www.w3schools.com/python/default.asp)  
+[   ][w3schools.com/python](https://www.w3schools.com/python/default.asp)  
   
 ### Function
-: - [Dasar dari function](https://www.w3schools.com/python/python_functions.asp)  
+[   ][Dasar dari function](https://www.w3schools.com/python/python_functions.asp)  
   
 ### Class
-: - [Dasar dari class](https://www.w3schools.com/python/python_classes.asp)  
-: - [Dasar dari class (fundamental)](https://www.w3schools.com/python/python_classes.asp)  
-: - [Cara membuat list sebuah objek](https://www.geeksforgeeks.org/how-to-create-a-list-of-object-in-python-class/)  
-: - [Cara mewarisi dari superclass ke subclass (inheritance)](https://www.w3schools.com/python/python_inheritance.asp)  
+[   ][Dasar dari class](https://www.w3schools.com/python/python_classes.asp)  
+[   ][Dasar dari class (fundamental)](https://www.w3schools.com/python/python_classes.asp)  
+[   ][Cara membuat list sebuah objek](https://www.geeksforgeeks.org/how-to-create-a-list-of-object-in-python-class/)  
+[   ][Cara mewarisi dari superclass ke subclass (inheritance)](https://www.w3schools.com/python/python_inheritance.asp)  
   
 ### tkinter
-: - [video based full course](https://youtu.be/YXPyB4XeYLA)  
-: - [video based course playlist](https://youtube.com/playlist?list=PLCC34OHNcOtoC6GglhF3ncJ5rLwQrLGnV)  
+[   ][video based full course](https://youtu.be/YXPyB4XeYLA)  
+[   ][video based course playlist](https://youtube.com/playlist?list=PLCC34OHNcOtoC6GglhF3ncJ5rLwQrLGnV)  
   
 ### django
-: - [text based course](https://www.w3schools.com/django/index.php)  
+[   ][text based course](https://www.w3schools.com/django/index.php)  
