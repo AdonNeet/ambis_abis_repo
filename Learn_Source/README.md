@@ -14,6 +14,8 @@ Note : tidak harus belajar dari link yang telah dicantumkan, bisa mencari sendir
 [Dasar dari class (fundamental)](https://www.w3schools.com/python/python_classes.asp)  
 [Cara membuat list sebuah objek](https://www.geeksforgeeks.org/how-to-create-a-list-of-object-in-python-class/)  
 [Cara mewarisi dari superclass ke subclass (inheritance)](https://www.w3schools.com/python/python_inheritance.asp)  
+[How to Get Class Name in Python?](https://favtutor.com/blogs/class-name-python)  
+[Getting the class name of an instance (StackOverflow)](https://stackoverflow.com/questions/510972/getting-the-class-name-of-an-instance)  
   
 ### tkinter
 [video based full course](https://youtu.be/YXPyB4XeYLA)  
