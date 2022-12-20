@@ -2,7 +2,7 @@ import random
 
 # init data awal
 data = ('kubus', 'balok', 'tabung')
-soal1 = ""; soal2 = ""; soal3 = ""; soal4 = ""; soal5 = "";
+soal1 = ""; soal2 = ""; soal3 = ""; soal4 = ""; soal5 = ""; 
 
 # bagian dict
 class dictionary(dict):
@@ -20,6 +20,12 @@ object = dictionary()
 
 # bagian class
 class soal:
+    sisi = None
+    panjang = None
+    lebar = None
+    tinggi = None
+    jari = None
+
     def kubus(self):
         self.sisi = random.randint(1, 50)
     def balok(self):
