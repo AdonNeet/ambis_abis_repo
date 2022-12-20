@@ -45,7 +45,7 @@ class soal:
         else:
             return f"{self.bentuk}, jari={self.jari}, panjang={self.tinggi}"
 
-
+# bagian membuat soal secara manual dan menampilkannya
 soal1 = soal(random.choice(data))
 soal2 = soal(random.choice(data))
 soal3 = soal(random.choice(data))
