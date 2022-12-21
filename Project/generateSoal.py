@@ -57,7 +57,8 @@ for i in range(1, 6):
     # instances.add(temp1, bentuk)
     instances += [temp1]
 
-# bagian menampilan masing-masing data
+"""
+# bagian menampilan masing-masing data  # tidak dipakai karena untuk ngetes 
 for instance in instances:
     if(instance.bentuk=='kubus'):
         print(instance.nama, '  ', instance.bentuk, 'sisi =', instance.sisi)
@@ -65,3 +66,4 @@ for instance in instances:
         print(instance.nama, '  ', instance.bentuk, 'panjang =', instance.panjang, 'lebar =', instance.lebar,  'tinggi =', instance.tinggi)
     else:
         print(instance.nama, '  ', instance.bentuk, 'jari2 =', instance.jari, 'lebar =', 'tinggi =', instance.tinggi)
+"""
