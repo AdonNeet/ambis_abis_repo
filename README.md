@@ -6,8 +6,8 @@ Untuk mengecek waktu commit dapat dicek di bagian history pada file (bukan di ba
 karena yang di branch main adalah hasil merge dengan waktu tidak menentu  
 
 Untuk hasil eksperimen individu bisa di cek di [Experiment](https://github.com/AdonNeet/ambis_abis_repo/tree/main/Experiment)
-Untuk belajar dasar python bisa membuka [Learn_Source](https://github.com/AdonNeet/ambis_abis_repo/tree/main/Learn_Source)
-Untuk project utama kami ada di [Project](https://github.com/AdonNeet/ambis_abis_repo/tree/main/Project)
+Untuk belajar dasar python bisa membuka [Learn_Source](https://github.com/AdonNeet/ambis_abis_repo/tree/main/Learn_Source)  
+Untuk project utama kami ada di [Project](https://github.com/AdonNeet/ambis_abis_repo/tree/main/Project)  
 
 
 # Anggota kelompok  
