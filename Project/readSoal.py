@@ -1,8 +1,9 @@
 import generateSoal
 
-# program membaca soal dari soal yang telah di generate
+# program membaca soal dari soal yang telah di generate di module generateSoal
 instances = generateSoal.instances
 
+# it work as well
 for instance in instances:
     if(instance.bentuk=='kubus'):
         print(instance.nama, '  ', instance.bentuk, 'sisi =', instance.sisi)
