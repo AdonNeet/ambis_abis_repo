@@ -5,6 +5,8 @@ Repository kelompok Ambis Abis
 Untuk mengecek waktu commit dapat dicek di bagian history pada file (bukan di bagian folder),  
 karena yang di branch main adalah hasil merge dengan waktu tidak menentu  
 
+Untuk belajar dasar python bisa membuka [Learn_Source](https://github.com/AdonNeet/ambis_abis_repo/tree/main/Learn_Source)
+
 
 # Anggota kelompok  
 Username  : AdonNeet  
