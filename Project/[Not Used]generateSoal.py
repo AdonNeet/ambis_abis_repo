@@ -2,8 +2,8 @@ import random
 
 # init data awal
 data = ('kubus', 'balok', 'tabung')
-soal1 = ""; soal2 = ""; soal3 = ""; soal4 = ""; soal5 = ""; 
 
+"""         # tidak digunakan
 # bagian dict
 class dictionary(dict):
   # __init__ function
@@ -13,19 +13,14 @@ class dictionary(dict):
   def add(self, key, value):
     self[key] = value
  
- 
 # init dict
-object = dictionary()
- 
+instances = dictionary()
+"""
+
+instances = []
 
 # bagian class
 class soal:
-    sisi = None
-    panjang = None
-    lebar = None
-    tinggi = None
-    jari = None
-
     def kubus(self):
         self.sisi = random.randint(1, 50)
     def balok(self):
@@ -35,7 +30,8 @@ class soal:
     def tabung(self):
         self.jari = random.randint(1, 50)
         self.tinggi = random.randint(1, 50)
-    def __init__(self, bentuk):
+    def __init__(self, nama, bentuk):
+        self.nama = nama
         self.bentuk = bentuk
         if(bentuk=='kubus'):
             self.kubus()
@@ -43,6 +39,7 @@ class soal:
             self.balok()
         else:
             self.tabung()
+    """ # tidak digunakan
     def __str__(self):
         if(self.bentuk=='kubus'):
             return f"{self.bentuk}, Sisi={self.sisi}"
@@ -50,16 +47,23 @@ class soal:
             return f"{self.bentuk}, panjang={self.panjang}, lebar={self.lebar}, panjang={self.panjang}"
         else:
             return f"{self.bentuk}, jari={self.jari}, panjang={self.tinggi}"
+    """
 
-# bagian membuat soal secara manual dan menampilkannya
-soal1 = soal(random.choice(data))
-soal2 = soal(random.choice(data))
-soal3 = soal(random.choice(data))
-soal4 = soal(random.choice(data))
-soal5 = soal(random.choice(data))
+# bagian membuat soal secara otomatis
+for i in range(1, 6):
+    temp1 = 'soal '+str(i)
+    bentuk = random.choice(data)
+    temp1 = soal(temp1, bentuk)
+    # instances.add(temp1, bentuk)
+    instances += [temp1]
 
-print(soal1)
-print(soal2)
-print(soal3)
-print(soal4)
-print(soal5)
+"""
+# bagian menampilan masing-masing data  # tidak dipakai karena untuk ngetes 
+for instance in instances:
+    if(instance.bentuk=='kubus'):
+        print(instance.nama, '  ', instance.bentuk, 'sisi =', instance.sisi)
+    elif(instance.bentuk=='balok'):
+        print(instance.nama, '  ', instance.bentuk, 'panjang =', instance.panjang, 'lebar =', instance.lebar,  'tinggi =', instance.tinggi)
+    else:
+        print(instance.nama, '  ', instance.bentuk, 'jari2 =', instance.jari, 'lebar =', 'tinggi =', instance.tinggi)
+"""
