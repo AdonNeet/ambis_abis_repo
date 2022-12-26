@@ -2,6 +2,8 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter.messagebox import showinfo
 
+# Note : sebaiknya pakai grid aja
+
 class MainWindow(tk.Tk):
     def __init__(self,root):
         self.root = root
@@ -25,7 +27,7 @@ class MainWindow(tk.Tk):
         #Halaman utama
         utama_label = ttk.Label(self.frame_utama,text="Pilih bagunan dan klik generate")
         utama_label.pack()
-        option_shape = ttk.OptionMenu(self.frame_utama,tk.StringVar(),"Option 1","Option 2","Option 3")
+        option_shape = ttk.OptionMenu(self.frame_utama,tk.StringVar(),"Option 1", "Option 1","Option 2","Option 3")
         option_shape.pack(side="left")
         value_entry = ttk.Entry(self.frame_utama)
         value_entry.pack(side="left")
