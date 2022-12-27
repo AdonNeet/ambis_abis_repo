@@ -30,6 +30,13 @@ class soal:
         else:
             self.tabung()
 
+# membuat satu soal
+def buatSoal():
+    bentuk = random.choice(data)
+    quest = soal(soalnya, bentuk)
+    print(quest.nama, '  ', quest.bentuk, 'sisi =', quest.sisi)
+
+"""
 # bagian membuat soal secara otomatis
 for i in range(1, 6):
     temp1 = 'soal '+str(i)
@@ -37,7 +44,9 @@ for i in range(1, 6):
     temp1 = soal(temp1, bentuk)
     # instances.add(temp1, bentuk)
     instances += [temp1]
+"""
 
+"""
 # bagian menampikan soal yang sudah dibuat
 for instance in instances:
     if(instance.bentuk=='kubus'):
@@ -47,3 +56,4 @@ for instance in instances:
     else:
         print(instance.nama, '  ', instance.bentuk, 'jari2 =', instance.jari, 'lebar =', 'tinggi =', instance.tinggi)
 print('\n')
+"""
