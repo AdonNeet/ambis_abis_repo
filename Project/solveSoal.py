@@ -1,5 +1,6 @@
 import initSoal
 print('ini dari solveSoal')
+"""
 # bagian dict
 class dictionary(dict):
   # __init__ function
@@ -9,31 +10,57 @@ class dictionary(dict):
   def add(self, key, value):
     self[key] = value
  
-# init dict
+# init var jawaban saat ini
 ans = dictionary()
+"""
 
 def kubus(s):
-        """
-        Mencari volume kubus       
-        """
-        print('Volume kubus tersebut adalah', s**3)
-        return (s**3)
+    """
+    Mencari volume kubus       
+    """
+    print('Volume kubus tersebut adalah', s**3)
+    ans.add(s**3)
         
 def balok(p, l, t):
-        """
-        Mencari volume balok       
-        """
-        print('Volume balok tersebut adalah', p*l*t)
-        return (p*l*t)
+    """
+    Mencari volume balok       
+    """
+    print('Volume balok tersebut adalah', p*l*t)
+    return (p*l*t)
 
 def tabung(r, t):
-        """
-        Mencari volume tabung      
-        """
-        print('Volume tabung tersebut adalah', round((22/7)*(r**2)*t, 2))
-        return (round((22/7)*(r**2)*t, 2))
+    """
+    Mencari volume tabung      
+    """
+    print('Volume tabung tersebut adalah', round((22/7)*(r**2)*t, 2))
+    return (round((22/7)*(r**2)*t, 2))
+def bejana(r1, r2, h1=None, h2=None):
+    """
+    Mencari tinggi salahh satu cairan
+    """
+    if(h1==None):
+        print('Tinggi permukaan air tersebut adalah', round((r2*h2)/r1, 2))
+        return(round((r2*h2)/r1, 2))
+    else:
+        print('Tinggi permukaan alkohol tersebut adalah', round((r1*h1)/r2, 2))
+        return(round((r1*h1)/r2, 2))
 
-quest = initSoal.soal
+# method untuk menjawab soal
+def jawab(soal):
+    if(soal.bentuk=='kubus'):
+        return(soal.nama, soal.bentuk, kubus(soal.sisi))
+    elif(soal.bentuk=='balok'):
+        return(soal.nama, soal.bentuk, balok(soal.panjang, soal.lebar, soal.tinggi))
+    elif(soal.bentuk=='tabung'):
+        return(soal.nama, soal.bentuk, tabung(soal.jari, soal.tinggi))
+    else:
+        return(soal.nama, soal.bentuk, bejana(soal.mAir, soal.mAlkohol, soal.hAir, soal.hAlkohol))
+
+
+# membuat soal
+initSoal.buatSoal()
+jawaban = jawab(initSoal.quest)
+print(jawaban)
 
 """
 # langsung solve tanpa harus buat temporary var
@@ -46,7 +73,7 @@ for soal in quest:
         ans.add(soal.nama, tabung(soal.jari, soal.tinggi))
 """
 
-print('\n')
+# print('\n')
 
 """ # for check the output        
 for soal in initSoal.instances:

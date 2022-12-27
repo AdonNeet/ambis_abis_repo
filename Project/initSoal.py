@@ -38,8 +38,10 @@ class soal:
         tmp = random.choice(dat)
         if(tmp=='air'):
             self.hAir=random.randint(1, 50)
+            self.hAlkohol = None
         else:
             self.hAlkohol=random.randint(1, 50)
+            self.hAir= None
 
 
     # bagian input argument
@@ -50,15 +52,17 @@ class soal:
             self.kubus()
         elif(bentuk=='balok'):
             self.balok()
-        else:
+        elif(bentuk=='tabung'):
             self.tabung()
+        else:
+            self.bejana()
 
 quest = None
 # membuat satu soal ketika dipanggil
 def buatSoal():
     global quest
     bentuk = random.choice(data)
-    quest = soal('soalnya', bentuk)
+    quest = soal('soal', bentuk)
     """ # untuk check soal yang terbentuk
     if(quest.bentuk=='kubus'):  # it works
         print(quest.nama, '  ', quest.bentuk, 'sisi =', quest.sisi)
@@ -67,6 +71,9 @@ def buatSoal():
     else:
         print(quest.nama, '  ', quest.bentuk, 'jari2 =', quest.jari, 'lebar =', 'tinggi =', quest.tinggi)
     """
+
+# otomatis menjalankan function diatas ketika initSoal di import
+# buatSoal()
 
 """
 # bagian membuat soal secara otomatis
