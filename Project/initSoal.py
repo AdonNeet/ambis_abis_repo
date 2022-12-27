@@ -4,7 +4,7 @@ print('ini dari initSoal')
 data = ('kubus', 'balok', 'tabung')
 
 # init dict
-instances = []
+# instances = []
 
 # bagian class
 class soal:

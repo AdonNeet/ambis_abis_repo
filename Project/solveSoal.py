@@ -33,8 +33,9 @@ def tabung(r, t):
         print('Volume tabung tersebut adalah', round((22/7)*(r**2)*t, 2))
         return (round((22/7)*(r**2)*t, 2))
 
-quest = initSoal.instances
+quest = initSoal.soal
 
+"""
 # langsung solve tanpa harus buat temporary var
 for soal in quest:
     if(soal.bentuk=='kubus'):
@@ -43,6 +44,7 @@ for soal in quest:
         ans.add(soal.nama, balok(soal.panjang, soal.lebar, soal.tinggi))
     else:
         ans.add(soal.nama, tabung(soal.jari, soal.tinggi))
+"""
 
 print('\n')
 
