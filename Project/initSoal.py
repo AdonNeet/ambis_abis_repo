@@ -1,9 +1,10 @@
 import random
 print('ini dari initSoal')
 # init data awal untuk gacha
-data = ('kubus', 'balok', 'tabung')
+data = ('kubus', 'balok', 'tabung', 'bejana')
+quest = None
 
-# init dict
+# init dict, tidak digunakan
 # instances = []
 
 # bagian class
@@ -18,6 +19,28 @@ class soal:
     def tabung(self):
         self.jari = random.randint(1, 50)
         self.tinggi = random.randint(1, 50)
+    def bejana(self):
+        """
+        Soal tentang hidrostatis
+
+        rumus hidrostatis bejana berhubungan
+        rho1 h1 = rho2 h2
+        rho = massa jenis
+        h = tinggi permukaan zat cair
+
+        disini kita akan menggunakan air dan alkohol
+        rho air = 1000kg/m^3
+        rho alkohol = 800kg/m^3
+        """
+        dat = ('air', 'alkohol')
+        self.mAir = int(1000)
+        self.mAlkohol = int(800)
+        tmp = random.choice(dat)
+        if(tmp=='air'):
+            self.hAir=random.randint(1, 50)
+        else:
+            self.hAlkohol=random.randint(1, 50)
+
 
     # bagian input argument
     def __init__(self, nama, bentuk):
@@ -30,11 +53,20 @@ class soal:
         else:
             self.tabung()
 
-# membuat satu soal
+quest = None
+# membuat satu soal ketika dipanggil
 def buatSoal():
+    global quest
     bentuk = random.choice(data)
-    quest = soal(soalnya, bentuk)
-    print(quest.nama, '  ', quest.bentuk, 'sisi =', quest.sisi)
+    quest = soal('soalnya', bentuk)
+    """ # untuk check soal yang terbentuk
+    if(quest.bentuk=='kubus'):  # it works
+        print(quest.nama, '  ', quest.bentuk, 'sisi =', quest.sisi)
+    elif(quest.bentuk=='balok'):
+        print(quest.nama, '  ', quest.bentuk, 'panjang =', quest.panjang, 'lebar =', quest.lebar,  'tinggi =', quest.tinggi)
+    else:
+        print(quest.nama, '  ', quest.bentuk, 'jari2 =', quest.jari, 'lebar =', 'tinggi =', quest.tinggi)
+    """
 
 """
 # bagian membuat soal secara otomatis
