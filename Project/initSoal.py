@@ -63,7 +63,7 @@ def buatSoal():
     bentuk = random.choice(data)
     tmp = soal('soal', bentuk)
     return tmp
-    """ # untuk check soal yang terbentuk
+    """ # untuk check soal yang terbentuk, not used 
     if(quest.bentuk=='kubus'):  # it works
         print(quest.nama, '  ', quest.bentuk, 'sisi =', quest.sisi)
     elif(quest.bentuk=='balok'):

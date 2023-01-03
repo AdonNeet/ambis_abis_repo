@@ -61,11 +61,11 @@ def jawab(soal):
     else:
         return(soal.bentuk, soal.know, bejana(soal.mAir, soal.mAlkohol, soal.hAir, soal.hAlkohol))
 
+
+"""
 # init var soal
 soal = None
 
-
-"""
 # membuat soal pada var soal
 soalBaru()  #untuk membuat soal baru, tinggal panggil fungsi ini aja lalu pangil var soal untuk mendapatkan data tentang soal
 jawaban = jawab(soal)
