@@ -57,12 +57,12 @@ class soal:
         else:
             self.bejana()
 
-quest = None
+
 # membuat satu soal ketika dipanggil
 def buatSoal():
-    global quest
     bentuk = random.choice(data)
-    quest = soal('soal', bentuk)
+    tmp = soal('soal', bentuk)
+    return tmp
     """ # untuk check soal yang terbentuk
     if(quest.bentuk=='kubus'):  # it works
         print(quest.nama, '  ', quest.bentuk, 'sisi =', quest.sisi)
@@ -73,7 +73,7 @@ def buatSoal():
     """
 
 # otomatis menjalankan function diatas ketika initSoal di import
-# buatSoal()
+# buatSoal(), di solveSoal akai soalBaru
 
 """
 # bagian membuat soal secara otomatis

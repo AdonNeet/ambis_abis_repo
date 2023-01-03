@@ -14,13 +14,17 @@ class dictionary(dict):
 ans = dictionary()
 """
 
+
+def soalBaru():
+    global soal
+    soal = initSoal.buatSoal()
+
 def kubus(s):
     """
     Mencari volume kubus       
     """
     print('Volume kubus tersebut adalah', s**3)
-    ans.add(s**3)
-        
+
 def balok(p, l, t):
     """
     Mencari volume balok       
@@ -34,6 +38,7 @@ def tabung(r, t):
     """
     print('Volume tabung tersebut adalah', round((22/7)*(r**2)*t, 2))
     return (round((22/7)*(r**2)*t, 2))
+    
 def bejana(r1, r2, h1=None, h2=None):
     """
     Mencari tinggi salahh satu cairan
@@ -56,10 +61,12 @@ def jawab(soal):
     else:
         return(soal.nama, soal.bentuk, bejana(soal.mAir, soal.mAlkohol, soal.hAir, soal.hAlkohol))
 
+# init var soal
+soal = None
 
-# membuat soal
-initSoal.buatSoal()
-jawaban = jawab(initSoal.quest)
+# membuat soal pada var soal
+soalBaru()  #untuk membuat soal baru, tinggal panggil fungsi ini aja lalu pangil var soal untuk mendapatkan data tentang soal
+jawaban = jawab(soal)
 print(jawaban)
 
 """
