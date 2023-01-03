@@ -16,8 +16,8 @@ ans = dictionary()
 
 
 def soalBaru():
-    global soal
     soal = initSoal.buatSoal()
+    return soal
 
 def kubus(s):
     """
@@ -38,7 +38,7 @@ def tabung(r, t):
     """
     print('Volume tabung tersebut adalah', round((22/7)*(r**2)*t, 2))
     return (round((22/7)*(r**2)*t, 2))
-    
+
 def bejana(r1, r2, h1=None, h2=None):
     """
     Mencari tinggi salahh satu cairan
@@ -53,21 +53,25 @@ def bejana(r1, r2, h1=None, h2=None):
 # method untuk menjawab soal
 def jawab(soal):
     if(soal.bentuk=='kubus'):
-        return(soal.nama, soal.bentuk, kubus(soal.sisi))
+        return(soal.bentuk, kubus(soal.sisi))
     elif(soal.bentuk=='balok'):
-        return(soal.nama, soal.bentuk, balok(soal.panjang, soal.lebar, soal.tinggi))
+        return(soal.bentuk, balok(soal.panjang, soal.lebar, soal.tinggi))
     elif(soal.bentuk=='tabung'):
-        return(soal.nama, soal.bentuk, tabung(soal.jari, soal.tinggi))
+        return(soal.bentuk, tabung(soal.jari, soal.tinggi))
     else:
-        return(soal.nama, soal.bentuk, bejana(soal.mAir, soal.mAlkohol, soal.hAir, soal.hAlkohol))
+        return(soal.bentuk, soal.know, bejana(soal.mAir, soal.mAlkohol, soal.hAir, soal.hAlkohol))
 
 # init var soal
 soal = None
 
+
+"""
 # membuat soal pada var soal
 soalBaru()  #untuk membuat soal baru, tinggal panggil fungsi ini aja lalu pangil var soal untuk mendapatkan data tentang soal
 jawaban = jawab(soal)
 print(jawaban)
+"""
+
 
 """
 # langsung solve tanpa harus buat temporary var
@@ -79,7 +83,6 @@ for soal in quest:
     else:
         ans.add(soal.nama, tabung(soal.jari, soal.tinggi))
 """
-
 # print('\n')
 
 """ # for check the output        

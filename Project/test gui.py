@@ -51,7 +51,7 @@ def gmbr_kubus():
 def gmbr_balok():
         label = Label(root, image=img_balok)
         label.place(x=50,y=50)
-        teks1 = Label(root,text='Panjang :', font=('Arial',20,'bold'))
+        teks1 = Label(root,text='Panjang : ', font=('Arial',20,'bold'))
         teks1.place(x=500,y=80)
         teks2 = Label(root,text='Lebar:', font=('Arial',20,'bold'))
         teks2.place(x=500,y=130)

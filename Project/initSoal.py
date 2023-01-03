@@ -35,8 +35,8 @@ class soal:
         dat = ('air', 'alkohol')
         self.mAir = int(1000)
         self.mAlkohol = int(800)
-        tmp = random.choice(dat)
-        if(tmp=='air'):
+        self.know = random.choice(dat)
+        if(self.know=='air'):
             self.hAir=random.randint(1, 50)
             self.hAlkohol = None
         else:
