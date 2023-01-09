@@ -33,7 +33,16 @@ def tabung(r, t):
         print('Volume tabung tersebut adalah', round((22/7)*(r**2)*t, 2))
         return (round((22/7)*(r**2)*t, 2))
 
+<<<<<<< Updated upstream
 quest = initSoal.instances
+=======
+# membuat soal
+initSoal.buatSoal()
+soal = initSoal.quest
+jawaban = jawab(soal)
+print(soal)
+print(jawaban)
+>>>>>>> Stashed changes
 
 # langsung solve tanpa harus buat temporary var
 for soal in quest:
