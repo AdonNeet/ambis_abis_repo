@@ -13,9 +13,9 @@ fram2 = Frame(root)
 
 root.resizable(False,False)
 """Mengakses gambar"""
-img_tabung= PhotoImage(file='C:\\Users\\vic5c\\OneDrive\\Documents\\GitHub\\ambis_abis_repo\\Project\\image\\tabung_new.gif')
-img_kubus= PhotoImage(file='C:\\Users\\vic5c\\OneDrive\\Documents\\GitHub\\ambis_abis_repo\\Project\\image\\kubus_new.gif')
-img_balok= PhotoImage(file='C:\\Users\\vic5c\\OneDrive\\Documents\\GitHub\\ambis_abis_repo\\Project\\image\\balok_new.gif')
+img_tabung= PhotoImage(file='C:\\Users\\Adon\\Documents\\GitHub\\ambis_abis_repo\\Project\\image\\tabung_new.gif')
+img_kubus= PhotoImage(file='C:\\Users\\Adon\\Documents\\GitHub\\ambis_abis_repo\\Project\\image\\kubus_new.gif')
+img_balok= PhotoImage(file='C:\\Users\\Adon\\Documents\\GitHub\\ambis_abis_repo\\Project\\image\\balok_new.gif')
 
 
 ans = StringVar()
@@ -82,6 +82,7 @@ img = (img_tabung,img_kubus,img_balok)
 def newpage():
         img_s = (random.choice(img))
         label = Label(root, image=img_s)
+        d.acak() # generate soal baru di data.py
         if img_s == img_tabung:
             fram1.grid()
             gambartabung = Label(fram1, text=gmbr_tnbng())
@@ -98,10 +99,11 @@ def newpage():
 
  
 """Mencetak soal"""
-label = Label(root, text=newpage())
-label.grid()
+def cetak():            # mencetak soal
+        label = Label(root, text=newpage())
+        label.grid()
 
-
+cetak()
 
 
 
