@@ -1,6 +1,6 @@
 import random
 from tkinter import *
-import tkin as t
+import GUIfixxx as g
 from tkinter.messagebox import showinfo
 
 class kubus:
@@ -8,7 +8,7 @@ class kubus:
         self.sisi = sisi
     def check(self):
         # Ambil jawaban dari input user
-        answer = t.ans.get()      
+        answer = g.Window2.ans.get()      
 
         # Hitung volume kubus
         volume = self.sisi ** 3
@@ -17,7 +17,8 @@ class kubus:
         if answer == str(volume):
             # Tampilkan pesan informasi jika jawaban benar
             showinfo("Information", "Jawaban Anda benar!")
-            t.cetak()
+            g.Window1.go_to_random_window(Window1)
+            
         else:
             # Tampilkan pesan error jika jawaban salah
             showinfo("Error", "Jawaban Anda salah!\nSilahkan coba lagi!")
