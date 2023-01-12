@@ -1,6 +1,6 @@
 import random
 from tkinter import *
-import tkin as t
+import GUIfixxx as t
 from tkinter.messagebox import showinfo
 
 class kubus:
@@ -17,7 +17,7 @@ class kubus:
         if answer == str(volume):
             # Tampilkan pesan informasi jika jawaban benar
             showinfo("Information", "Jawaban Anda benar!")
-            t.cetak()
+            t.newpage()
         else:
             # Tampilkan pesan error jika jawaban salah
             showinfo("Error", "Jawaban Anda salah!\nSilahkan coba lagi!")
@@ -61,6 +61,7 @@ class balok:
         if answer == str(volume):
             # Tampilkan pesan informasi jika jawaban benar 
             showinfo("Information", "Jawaban Anda benar!")
+            t.cetak.grid_remove()
             t.cetak()
         else:
             # Tampilkan pesan error jika jawaban salah
@@ -72,3 +73,4 @@ def acak():
     k = kubus(random.randint(1, 50))
     tb = tabung(jari=random.randint(1, 50), tinggi=random.randint(1, 50))
     b = balok(panjang=random.randint(1, 50), lebar=random.randint(1, 50), tinggi=random.randint(1, 50))
+

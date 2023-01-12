@@ -1,20 +1,21 @@
 from tkinter import *
 import random
+import data as d 
 
 from tkinter.messagebox import showinfo
 class Window1(Tk):
     def __init__(self):
         super().__init__()
         self.geometry("800x500")
-        self.title("Window 1")
+        self.title("Tabung")
         self.resizable(False,False)
-        self.img_tabung= PhotoImage(file='C:\\Users\\Money\\Documents\\GitHub\\ambis_abis_repo\\Project\\image\\tabung_new.gif')
+        self.img_tabung= PhotoImage(file='C:\\Users\\vic5c\\OneDrive\\Documents\\GitHub\\ambis_abis_repo\\Project\\image\\tabung_new.gif')
         
         gambartabung = Label(self, image=self.img_tabung)
         gambartabung.place(x=50,y=5)
-        teks1 = Label(self,text='Jari - Jari: ', font=('Arial',20,'bold'))
+        teks1 = Label(self,text=f'Jari - Jari : {d.tb.jari}', font=('Arial',20,'bold'))
         teks1.place(x=350,y=130)
-        teks2 = Label(self,text='Tinggi :', font=('Arial',20,'bold'))
+        teks2 = Label(self,text=f'Tinggi : {d.tb.tinggi}', font=('Arial',20,'bold'))
         teks2.place(x=350,y=180)
         teks3 = Label(self,text='Volume : ?', font=('Arial',20,'bold'))
         teks3.place(x=350,y=230)
@@ -28,7 +29,7 @@ class Window1(Tk):
 
     def go_to_random_window(self):
         self.destroy()
-        next_window = random.choice([Window2, Window3, Window4])
+        next_window = random.choice([Window2, Window3])
         window = next_window()
 
 class Window2(Tk):
@@ -36,13 +37,13 @@ class Window2(Tk):
         super().__init__()
 
         self.geometry("800x500")
-        self.title("Window 2")
+        self.title("Kubus")
         self.resizable(False,False)
-        self.img_kubus= PhotoImage(file='C:\\Users\\Money\\Documents\\GitHub\\ambis_abis_repo\\Project\\image\\kubus_new.gif')
+        self.img_kubus= PhotoImage(file='C:\\Users\\vic5c\\OneDrive\\Documents\\GitHub\\ambis_abis_repo\\Project\\image\\kubus_new.gif')
         
         gambarkubus = Label(self, image=self.img_kubus)
         gambarkubus.place(x=50,y=5)
-        teks2 = Label(self,text='Sisi: ', font=('Arial',20,'bold'))
+        teks2 = Label(self,text=f'Sisi: {d.k.sisi}', font=('Arial',20,'bold'))
         teks2.place(x=500,y=130)
         teks4 = Label(self,text='Volume : ?', font=('Arial',20,'bold'))
         teks4.place(x=500,y=180)
@@ -57,7 +58,7 @@ class Window2(Tk):
 
     def go_to_random_window(self):
         self.destroy()
-        next_window = random.choice([Window1, Window3, Window4])
+        next_window = random.choice([Window1, Window3])
         window = next_window()
 
 class Window3(Tk):
@@ -65,17 +66,17 @@ class Window3(Tk):
         super().__init__()
 
         self.geometry("800x500")
-        self.title("Window 3")
+        self.title("Balok")
         self.resizable(False,False)
-        self.img_balok= PhotoImage(file='C:\\Users\\Money\\Documents\\GitHub\\ambis_abis_repo\\Project\\image\\balok_new.gif')
+        self.img_balok= PhotoImage(file='C:\\Users\\vic5c\\OneDrive\\Documents\\GitHub\\ambis_abis_repo\\Project\\image\\balok_new.gif')
 
         gambarbalok = Label(self, image=self.img_balok)
         gambarbalok.place(x=50,y=50)
-        teks1 = Label(self,text='Panjang :', font=('Arial',20,'bold'))
+        teks1 = Label(self,text=f'Panjang : {d.b.panjang}', font=('Arial',20,'bold'))
         teks1.place(x=500,y=80)
-        teks2 = Label(self,text='Lebar:', font=('Arial',20,'bold'))
+        teks2 = Label(self,text=f'Lebar: {d.b.lebar}', font=('Arial',20,'bold'))
         teks2.place(x=500,y=130)
-        teks3 = Label(self,text='Tinggi :', font=('Arial',20,'bold'))
+        teks3 = Label(self,text=f'Tinggi : {d.b.tinggi}', font=('Arial',20,'bold'))
         teks3.place(x=500,y=180)
         teks4 = Label(self,text='Volume : ?', font=('Arial',20,'bold'))
         teks4.place(x=500,y=230)
@@ -90,27 +91,12 @@ class Window3(Tk):
 
     def go_to_random_window(self):
         self.destroy()
-        next_window = random.choice([Window1, Window2, Window4])
+        next_window = random.choice([Window1, Window2])
         window = next_window()
 
-class Window4(Tk):
-    def __init__(self):
-        super().__init__()
-
-        self.geometry("800x500")
-        self.title("Window 4")
-        self.resizable(False,False)
-
-        self.button = Button(self, text="Next", command=self.go_to_random_window)
-        self.button.pack()
-
-    def go_to_random_window(self):
-        self.destroy()
-        next_window = random.choice([Window1, Window2, Window3])
-        window = next_window()
 
 if __name__ == "__main__":
-    start_window = random.choice([Window1, Window2, Window3, Window4])
+    start_window = random.choice([Window1, Window2, Window3])
     window1 = start_window()
     window1.mainloop()
 
