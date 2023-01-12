@@ -23,3 +23,6 @@ Note : tidak harus belajar dari link yang telah dicantumkan, bisa mencari sendir
   
 ### django
 [text based course](https://www.w3schools.com/django/index.php)  
+
+### pathlib
+[Find path to the given file using Python](https://www.geeksforgeeks.org/find-path-to-the-given-file-using-python/) 
