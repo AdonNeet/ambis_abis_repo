@@ -1,6 +1,6 @@
 import random
 from tkinter import *
-import GUIfixxx as t
+import GUIfixxx as g
 from tkinter.messagebox import showinfo
 
 class kubus:
@@ -8,7 +8,7 @@ class kubus:
         self.sisi = sisi
     def check(self):
         # Ambil jawaban dari input user
-        answer = t.ans.get()      
+        answer = g.Window2.ans.get()      
 
         # Hitung volume kubus
         volume = self.sisi ** 3
@@ -17,7 +17,8 @@ class kubus:
         if answer == str(volume):
             # Tampilkan pesan informasi jika jawaban benar
             showinfo("Information", "Jawaban Anda benar!")
-            t.newpage()
+            g.Window1.go_to_random_window(Window1)
+            
         else:
             # Tampilkan pesan error jika jawaban salah
             showinfo("Error", "Jawaban Anda salah!\nSilahkan coba lagi!")
@@ -29,7 +30,7 @@ class tabung:
         self.tinggi = tinggi
     def check(self):
         # Ambil jawaban dari input user
-        answer = t.ans.get()      
+        answer = g.ans.get()      
 
         # Hitung volume tabung
         volume = round((22/7)*(self.jari ** 2)*self.tinggi, 2)
@@ -38,7 +39,7 @@ class tabung:
         if answer == str(volume):
             # Tampilkan pesan informasi jika jawaban benar
             showinfo("Information", "Jawaban Anda benar!")
-            t.cetak()
+            g.cetak()
         else:
             # Tampilkan pesan error jika jawaban salah
             showinfo("Error", "Jawaban Anda salah!\nSilahkan coba lagi!")
@@ -52,7 +53,7 @@ class balok:
         self.tinggi = tinggi
     def check(self):
         # Ambil jawaban dari input user
-        answer = t.ans.get()      
+        answer = g.ans.get()      
 
         # Hitung volume balok
         volume = self.panjang * self.lebar * self.tinggi
@@ -61,8 +62,7 @@ class balok:
         if answer == str(volume):
             # Tampilkan pesan informasi jika jawaban benar 
             showinfo("Information", "Jawaban Anda benar!")
-            t.cetak.grid_remove()
-            t.cetak()
+            g.cetak()
         else:
             # Tampilkan pesan error jika jawaban salah
             showinfo("Error", "Jawaban Anda salah!\nSilahkan coba lagi!")
@@ -73,4 +73,3 @@ def acak():
     k = kubus(random.randint(1, 50))
     tb = tabung(jari=random.randint(1, 50), tinggi=random.randint(1, 50))
     b = balok(panjang=random.randint(1, 50), lebar=random.randint(1, 50), tinggi=random.randint(1, 50))
-
