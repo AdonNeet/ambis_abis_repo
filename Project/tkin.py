@@ -27,7 +27,7 @@ def gmbr_tnbng():
         teks1.place(x=350,y=130)
         teks2 = Label(root,text=f'Tinggi : {d.tb.tinggi}', font=('Arial',20,'bold'))
         teks2.place(x=350,y=180)
-        teks3 = Label(root,text='Volume : ?', font=('Arial',20,'bold'))
+        teks3 = Label(root,text='Volume air : ?', font=('Arial',20,'bold'))
         teks3.place(x=350,y=230)
 
         teks5 = Label(root,text='Answer :', font=('Arial',20,'bold'))
@@ -44,7 +44,7 @@ def gmbr_kubus():
         label.place(x=50,y=5)
         teks2 = Label(root,text=f"Sisi : {d.k.sisi}", font=('Arial',20,'bold'))
         teks2.place(x=500,y=130)
-        teks4 = Label(root,text='Volume : ?', font=('Arial',20,'bold'))
+        teks4 = Label(root,text='Volume air : ?', font=('Arial',20,'bold'))
         teks4.place(x=500,y=180)
 
         teks5 = Label(root,text='Answer :', font=('Arial',20,'bold'))
@@ -66,7 +66,7 @@ def gmbr_balok():
         teks2.place(x=500,y=130)
         teks3 = Label(root,text=f'Tinggi : {d.b.tinggi}', font=('Arial',20,'bold'))
         teks3.place(x=500,y=180)
-        teks4 = Label(root,text='Volume : ?', font=('Arial',20,'bold'))
+        teks4 = Label(root,text='Volume air : ?', font=('Arial',20,'bold'))
         teks4.place(x=500,y=230)
 
         teks5 = Label(root,text='Answer :', font=('Arial',20,'bold'))
