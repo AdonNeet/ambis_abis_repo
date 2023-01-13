@@ -1,7 +1,12 @@
 from tkinter import *
+from pathlib import Path as p
 import random
 import data as d
 from tkinter.messagebox import showinfo
+
+# mencari current working directory
+tmp = str(p.cwd())
+print(tmp)
 
 class Window1(Tk):
     def __init__(self):
@@ -11,7 +16,7 @@ class Window1(Tk):
         self.geometry("800x500")
         self.title("Window 1")
         self.resizable(False,False)
-        self.img_tabung= PhotoImage(file='C:\\Users\\Money\\Documents\\GitHub\\ambis_abis_repo\\Project\\image\\tabung_new.gif')
+        self.img_tabung= PhotoImage(file=tmp+'\\image\\tabung_new.gif')
         self.ans = StringVar()
         
         gambartabung = Label(self, image=self.img_tabung)
@@ -20,7 +25,7 @@ class Window1(Tk):
         teks1.place(x=350,y=130)
         teks2 = Label(self,text='Tinggi :'+self.tinggi, font=('Arial',20,'bold'))
         teks2.place(x=350,y=180)
-        teks3 = Label(self,text='Volume : ?', font=('Arial',20,'bold'))
+        teks3 = Label(self,text='Volume air : ?', font=('Arial',20,'bold'))
         teks3.place(x=350,y=230)
 
         teks5 = Label(self,text='Answer :', font=('Arial',20,'bold'))
@@ -42,7 +47,7 @@ class Window2(Tk):
         self.geometry("800x500")
         self.title("Window 2")
         self.resizable(False,False)
-        self.img_kubus= PhotoImage(file='C:\\Users\\Money\\Documents\\GitHub\\ambis_abis_repo\\Project\\image\\kubus_new.gif')
+        self.img_kubus= PhotoImage(file=tmp+'\\image\\kubus_new.gif')
         self.sisi = str(d.k.sisi)
         self.ans = StringVar()
         
@@ -50,7 +55,7 @@ class Window2(Tk):
         gambarkubus.place(x=50,y=5)
         teks2 = Label(self,text='Sisi: '+self.sisi, font=('Arial',20,'bold'))
         teks2.place(x=500,y=130)
-        teks4 = Label(self,text='Volume : ?', font=('Arial',20,'bold'))
+        teks4 = Label(self,text='Volume air : ?', font=('Arial',20,'bold'))
         teks4.place(x=500,y=180)
 
         teks5 = Label(self,text='Answer :', font=('Arial',20,'bold'))
@@ -73,7 +78,7 @@ class Window3(Tk):
         self.geometry("800x500")
         self.title("Window 3")
         self.resizable(False,False)
-        self.img_balok= PhotoImage(file='C:\\Users\\Money\\Documents\\GitHub\\ambis_abis_repo\\Project\\image\\balok_new.gif')
+        self.img_balok= PhotoImage(file=tmp+'\\image\\balok_new.gif')
         self.panjang = str(d.b.panjang)
         self.lebar = str(d.b.lebar)
         self.tinggi = str(d.b.tinggi)
@@ -87,7 +92,7 @@ class Window3(Tk):
         teks2.place(x=500,y=130)
         teks3 = Label(self,text='Tinggi :'+self.tinggi, font=('Arial',20,'bold'))
         teks3.place(x=500,y=180)
-        teks4 = Label(self,text='Volume : ?', font=('Arial',20,'bold'))
+        teks4 = Label(self,text='Volume air: ?', font=('Arial',20,'bold'))
         teks4.place(x=500,y=230)
 
         teks5 = Label(self,text='Answer :', font=('Arial',20,'bold'))
@@ -123,4 +128,3 @@ if __name__ == "__main__":
     start_window = random.choice([Window1, Window2, Window3, Window4])
     window1 = start_window()
     window1.mainloop()
-
