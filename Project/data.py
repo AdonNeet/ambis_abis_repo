@@ -17,7 +17,7 @@ class kubus:
         if answer == str(volume):
             # Tampilkan pesan informasi jika jawaban benar
             showinfo("Information", "Jawaban Anda benar!")
-            g.Window1.go_to_random_window(Window1)
+            g.Window2.go_to_random_window()
             
         else:
             # Tampilkan pesan error jika jawaban salah
@@ -30,7 +30,7 @@ class tabung:
         self.tinggi = tinggi
     def check(self):
         # Ambil jawaban dari input user
-        answer = g.ans.get()      
+        answer = g.Window1.ans.get()    
 
         # Hitung volume tabung
         volume = round((22/7)*(self.jari ** 2)*self.tinggi, 2)
@@ -53,7 +53,7 @@ class balok:
         self.tinggi = tinggi
     def check(self):
         # Ambil jawaban dari input user
-        answer = g.ans.get()      
+        answer = g.Window3.ans.get()      
 
         # Hitung volume balok
         volume = self.panjang * self.lebar * self.tinggi
