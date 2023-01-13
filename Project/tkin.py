@@ -13,9 +13,9 @@ fram2 = Frame(root)
 
 root.resizable(False,False)
 """Mengakses gambar"""
-img_tabung= PhotoImage(file='C:\\Users\\Adon\\Documents\\GitHub\\ambis_abis_repo\\Project\\image\\tabung_new.gif')
-img_kubus= PhotoImage(file='C:\\Users\\Adon\\Documents\\GitHub\\ambis_abis_repo\\Project\\image\\kubus_new.gif')
-img_balok= PhotoImage(file='C:\\Users\\Adon\\Documents\\GitHub\\ambis_abis_repo\\Project\\image\\balok_new.gif')
+img_tabung= PhotoImage(file='C:\\Users\\vic5c\\OneDrive\\Documents\\GitHub\\ambis_abis_repo\\Project\\image\\tabung_new.gif')
+img_kubus= PhotoImage(file='C:\\Users\\vic5c\\OneDrive\\Documents\\GitHub\\ambis_abis_repo\\Project\\image\\kubus_new.gif')
+img_balok= PhotoImage(file='C:\\Users\\vic5c\\OneDrive\\Documents\\GitHub\\ambis_abis_repo\\Project\\image\\balok_new.gif')
 
 
 ans = StringVar()

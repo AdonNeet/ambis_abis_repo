@@ -36,14 +36,16 @@ class Window1(Tk):
 
         teks5 = Label(self,text='Answer :', font=('Arial',20,'bold'))
         teks5.place(x=350,y=280)
-        jawaban = Entry(self, width= 20,borderwidth=3,font=('Arial',18),textvariable=self.ans)
+        jawaban = Entry(self, width= 20,borderwidth=3,font=('Arial',18),textvariable=Window1.ans)
         jawaban.place(x=350,y=330)
         but_aswer = Button(self, text='Check', font=('Arial',14,'bold'),padx=20,command=self.go_to_random_window)
         but_aswer.place(x=620,y=325)
 
     def go_to_random_window(self):
+        d.tb.check()
         self.destroy()
-        next_window = random.choice([Window2, Window3, Window4])
+        next_window = random.choice([Window2, Window3])
+        d.acak()
         window = next_window()
 
 
@@ -72,20 +74,22 @@ class Window2(Tk):
         jawaban = Entry(self, width= 40,borderwidth=3,font=('Arial',18),textvariable=Window2.ans)
         jawaban.place(x=60,y=400)
 
-        but_aswer = Button(self, text='Check', font=('Arial',14,'bold'),padx=20,command=d.k.check)
+        but_aswer = Button(self, text='Check', font=('Arial',14,'bold'),padx=20,command=self.go_to_random_window)
         but_aswer.place(x=589,y=396)
         
-    @classmethod
     def go_to_random_window(self):
+        d.k.check()
         self.destroy()
-        next_window = random.choice([Window1, Window3, Window4])
+        next_window = random.choice([Window1, Window3])
+        d.acak()
         window = next_window()
+
 
 class Window3(Tk):
     ans = None
     def __init__(self):
         super().__init__()
-        Window1.ans = StringVar()
+        Window3.ans = StringVar()
         self.ans = StringVar()
 
         self.geometry("800x500")
@@ -110,36 +114,22 @@ class Window3(Tk):
 
         teks5 = Label(self,text='Answer :', font=('Arial',20,'bold'))
         teks5.place(x=60,y=300)
-        jawaban = Entry(self, width= 40,borderwidth=3,font=('Arial',18))
+        jawaban = Entry(self, width= 40,borderwidth=3,font=('Arial',18),textvariable=Window3.ans)
         jawaban.place(x=60,y=350)
 
         but_aswer = Button(self, text='Check', font=('Arial',14,'bold'),padx=20,command=self.go_to_random_window)
         but_aswer.place(x=589,y=346)
 
     def go_to_random_window(self):
+        d.b.check()
         self.destroy()
-        next_window = random.choice([Window1, Window2, Window4])
+        next_window = random.choice([Window1, Window2])
         window = next_window()
 
-class Window4(Tk):
-    def __init__(self):
-        super().__init__()
-
-        self.geometry("800x500")
-        self.title("Window 4")
-        self.resizable(False,False)
-
-        self.button = Button(self, text="Next", command=self.go_to_random_window)
-        self.button.pack()
-
-    def go_to_random_window(self):
-        self.destroy()
-        next_window = random.choice([Window1, Window2, Window3])
-        window = next_window()
 
 __name__ = "__main__"
 
 if __name__ == "__main__":
-    start_window = random.choice([Window1, Window2, Window3, Window4])
+    start_window = random.choice([Window1, Window2, Window3])
     window1 = start_window()
     window1.mainloop()
