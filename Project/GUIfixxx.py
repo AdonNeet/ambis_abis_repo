@@ -140,4 +140,3 @@ if __name__ == "__main__":
     start_window = random.choice([Window1, Window2, Window3, Window4])
     window1 = start_window()
     window1.mainloop()
-
