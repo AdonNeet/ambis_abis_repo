@@ -1,5 +1,5 @@
 # to ignore txt, markdown file
-*.md
+# *.md
 *.txt
 
 # to ignore License
