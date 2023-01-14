@@ -10,9 +10,9 @@ fram1 = Frame(root)
 fram2 = Frame(root)
 
 
-
+# Path sumber gambar
 root.resizable(False,False)
-"""Mengakses gambar"""
+"""Mengakses gambar"""  #  silahkan set gambar sesuai path current working directory file ini (ex:'C:\\Users\\vic5c\\OneDrive\\Documents\\GitHub\\ambis_abis_repo\\Project')
 img_tabung= PhotoImage(file='C:\\Users\\vic5c\\OneDrive\\Documents\\GitHub\\ambis_abis_repo\\Project\\image\\tabung_new.gif')
 img_kubus= PhotoImage(file='C:\\Users\\vic5c\\OneDrive\\Documents\\GitHub\\ambis_abis_repo\\Project\\image\\kubus_new.gif')
 img_balok= PhotoImage(file='C:\\Users\\vic5c\\OneDrive\\Documents\\GitHub\\ambis_abis_repo\\Project\\image\\balok_new.gif')
