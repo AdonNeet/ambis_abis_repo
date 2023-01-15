@@ -6,9 +6,9 @@ Nama Project : Game Mencari Volume Air
 
 Cara menjalankan program :  
 > - Set path gambar pada file tkin.py
-> - Run data.py  
+> - Run data.py dengan python
 
 <br>  
 Kelompok Ambis Abis
 
-2023
+~ 2023
